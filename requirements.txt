@@ -1,0 +1,36 @@
+# Verified working set for this project (Python 3.10, Windows 11, RTX 3070).
+#   py -3.10 -m venv env310
+#   env310\Scripts\python.exe -m pip install -r requirements.txt
+#
+# Simulator networking
+# The Udacity simulator is a Unity build using websocket-sharp. It opens a
+# websocket directly and never completes the namespace handshake that
+# python-socketio 5.x requires. Against a 5.x server the connection is
+# established and telemetry arrives, but every event is then dropped with
+# "None is not connected to namespace /", so the car never moves - which looks
+# exactly like a too-old version and is very easy to misdiagnose.
+python-socketio==4.6.1
+python-engineio==3.13.2
+eventlet==0.33.3
+# Flask 2.1.3 and friends are pinned because eventlet 0.33.3 predates the
+# Werkzeug 2.1+ / itsdangerous 2.1+ API changes.
+Flask==2.1.3
+Werkzeug==2.0.3
+itsdangerous==2.0.1
+Jinja2==3.0.3
+MarkupSafe==2.0.1
+greenlet==2.0.2
+dnspython==2.2.1
+
+# Deep learning / data stack
+# TensorFlow 2.10 is the last release with native Windows GPU support, and the
+# last on Keras 2. it uses the RTX 3070 (my graphic card) without WSL2, and it
+# avoids the Keras 3 HDF5 loader problems that break model.h5 round-tripping.
+# Upgrading past 2.10 drops to CPU and changes the saved format
+tensorflow==2.10.1
+numpy==1.24.4
+pandas==2.0.3
+opencv-python==4.8.1.78
+matplotlib==3.7.3
+scikit-learn==1.3.2
+Pillow==9.5.0
