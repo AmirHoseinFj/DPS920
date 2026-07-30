@@ -1,6 +1,7 @@
+# Demo
 ![Demo](recording.gif)
 
-# [Click for Full Recording](Recording.mp4)
+# [!Click for Full Recording!](Recording.mp4)
 
 # Self-Driving Car Simulation Project (CNN) - Amirhossein Ghaffarzadeh 120734223 - Group 16 
 
