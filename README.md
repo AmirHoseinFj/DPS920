@@ -2,7 +2,7 @@
 
 # [Click for Full Recording](Recording.mp4)
 
-# Self-Driving Car Simulation Project (CNN) - Amirhossein Ghaffarzadeh 120734223
+# Self-Driving Car Simulation Project (CNN) - Amirhossein Ghaffarzadeh 120734223 - Group 16 
 
 Trains an Nvidia end-to-end CNN to predict steering angle from the Udacity
 self-driving car simulator's center-camera images, then drives the car
