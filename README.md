@@ -1,4 +1,3 @@
-# Demo
 ![Demo](recording.gif)
 
 # [!Click for Full Recording!](Recording.mp4)
